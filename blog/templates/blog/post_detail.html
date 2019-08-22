@@ -1,18 +1,16 @@
-<!-- 'blog/base.html'에서 아래의 'content'라는 이름의 block을 확장해서 사용한다' -->
-{% extends 'blog/base.html '%} 
+{% extends 'blog/base.html' %}
 
 {% block content %}
-{% for post in posts %}
 <div class="post">
+{% if post.published_date %}
   <div class="date">
     <p>Published: {{ post.published_date }}</p>
   </div>
+{% endif %}
   <h1 class="post-title">
     <!-- 'post_detail'은 view 이름, pk=post.pk에서 pk는 데이터베이스읭 각 레코드를 식별하는 Primary Key(기본키)의 줄임말 -->
     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
   </h1>
   <p>{{ post.text | linebreaksbr }}</p>
 </div>
-{% endfor %}
 {% endblock %}
-   

@@ -1,0 +1,29 @@
+p {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lobster";
+}
+
+.page-header {
+  background-color: #18bc9c;
+  margin-top: 0;
+  padding: 20px 20px 20px 40px;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+  color: #fff;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.post-title > a {
+  color: black;
+}
